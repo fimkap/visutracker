@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
     def index
         @articles = Article.all
+        @articles_count = Article.count
     end
 
     def show
