@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-    before_action :authenticate_user!
+    before_action :authenticate_user!, except: [:index, :show]
 
     def index
         @articles = Article.all
@@ -16,7 +16,8 @@ class ArticlesController < ApplicationController
 
 	def create
       #render plain: params[:article].inspect
-      @article = Article.new(article_params)
+      #@article = Article.new(article_params)
+      @article = current_user.articles.new(article_params)
 
       if @article.save
           redirect_to @article

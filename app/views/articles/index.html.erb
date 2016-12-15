@@ -1,4 +1,8 @@
 <h1>Issues <%= @articles_count %></h1>
+
+<% if user_signed_in? %>
+    <th>Logged In</th> 
+<% end %>
  
 <%= link_to 'New article', new_article_path %>
 <table>
