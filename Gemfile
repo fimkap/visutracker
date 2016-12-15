@@ -26,13 +26,22 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'devise', '~> 4.2'
+gem 'paperclip', '~> 5.1'
+gem 'masonry-rails', '~> 0.2.4'
+gem 'jquery-turbolinks', '~> 2.1'
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry', '~> 0.10.4'
 end
 
 group :development do
