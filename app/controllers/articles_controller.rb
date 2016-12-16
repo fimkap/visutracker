@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
       @article = current_user.articles.new(article_params)
 
       if @article.save
-          redirect_to @article
+          redirect_to articles_url
       else
           render 'new'
       end
@@ -28,6 +28,6 @@ class ArticlesController < ApplicationController
 
     private 
         def article_params
-            params.require(:article).permit(:title, :text)
+            params.require(:article).permit(:title, :text, :image)
         end
 end

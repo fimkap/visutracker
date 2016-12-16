@@ -2,6 +2,7 @@
   <% @articles.each do |article| %>
     <div class="box" style="margin-left:auto;margin-right:auto;width:500px">
       <div class="panel panel-default">
+        <%= link_to image_tag(article.image.url(:medium)), article %>
         <div class="panel-body">
           <h3><%= article.title %></h2>
           <h4><%= article.text %></h4>
