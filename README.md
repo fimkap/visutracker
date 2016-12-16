@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+1. Signup/Login style
+2. NavBar actions fix
+Paperclip
+3. Add Edit/Delete logic
+4. Rspec/Tests
+5. AngularJS
+6. Rails Way
+7. Ruby
+
