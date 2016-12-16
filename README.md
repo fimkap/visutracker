@@ -23,6 +23,8 @@ Things you may want to cover:
 
 * ...
 
+## Todo
+
 1. Signup/Login style
 2. NavBar actions fix
 Paperclip
