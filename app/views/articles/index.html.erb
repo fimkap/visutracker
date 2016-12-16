@@ -3,7 +3,8 @@
     <div class="box" style="margin-left:auto;margin-right:auto;width:500px">
       <div class="panel panel-default">
         <div class="panel-body">
-          <h2><%= article.text %></h2>
+          <h3><%= article.title %></h2>
+          <h4><%= article.text %></h4>
           <br/><strong><%= article.user.email if article.user %></strong><br/>
         </div>
         <% if article.user == current_user %>
