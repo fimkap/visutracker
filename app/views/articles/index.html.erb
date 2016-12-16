@@ -1,21 +1,21 @@
-<h1>Issues <%= @articles_count %></h1>
-
-<% if user_signed_in? %>
-    <th>Logged In</th> 
-<% end %>
- 
-<%= link_to 'New article', new_article_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <!-- <th>Text</th> */ -->
-  </tr>
- 
+<div id="articles" class="transitions-enabled">
   <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <!-- <td><%= article.text %></td> --> 
-      <td><%= link_to 'Show', article_path(article) %></td>
-    </tr>
+    <div class="box" style="margin-left:auto;margin-right:auto;width:500px">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h2><%= article.text %></h2>
+          <br/><strong><%= article.user.email if article.user %></strong><br/>
+        </div>
+        <% if article.user == current_user %>
+          <div class="panel-footer">
+            <%= link_to 'Edit', edit_article_path(article) %><br/>
+            <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-</table>
+</div>
+<div class="center">
+<%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+</div>
