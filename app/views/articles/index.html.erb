@@ -10,8 +10,10 @@
         </div>
         <% if article.user == current_user %>
           <div class="panel-footer">
-            <%= link_to 'Edit', edit_article_path(article) %><br/>
-            <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <div class="btn-group">
+              <%= link_to 'Edit', edit_article_path(article), :class => "btn btn-warning" %>
+              <%= link_to 'Destroy', article, method: :delete, :class => "btn btn-danger" %>
+            </div>
           </div>
         <% end %>
       </div>
@@ -19,5 +21,5 @@
   <% end %>
 </div>
 <div class="center">
-<%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+<%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
 </div>

@@ -27,6 +27,10 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    respond_to do |format|
+      format.html { redirect_to articles_url, notice: 'Editing issue has not been implemented yet.' }
+      format.json { head :no_content }
+    end
   end
 
   def destroy
