@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @articles = Article.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+    @articles = Article.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
     @articles_count = Article.count
   end
 
