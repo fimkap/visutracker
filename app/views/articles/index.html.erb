@@ -2,10 +2,16 @@
   <% @articles.each do |article| %>
     <div class="box" style="margin-left:auto;margin-right:auto;width:500px">
       <div class="panel panel-default">
-        <%= link_to image_tag(article.image.url(:medium)), article %>
         <div class="panel-body">
-          <h3><%= article.title %></h2>
-          <h4><%= article.text %></h4>
+					<div class="card">
+						<div class="card-block">
+							<h3 class="card-title"><%= article.title %></h3>
+						</div>
+						<img src="<%= article.image.url(:medium)%>" alt="Card image">
+						<div class="card-block">
+							<p class="card-text"><%= article.text %></p>
+						</div>
+					</div>
           <br/><strong><%= article.user.email if article.user %></strong><br/>
         </div>
         <% if article.user == current_user %>
