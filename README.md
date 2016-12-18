@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Visual Issue Tracker Ruby on Rails app.
 
 Things you may want to cover:
 
@@ -22,15 +21,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-## Todo
-
-1. Signup/Login style
-2. NavBar actions fix
-Paperclip
-3. Add Edit/Delete logic
-4. Rspec/Tests
-5. AngularJS
-6. Rails Way
-7. Ruby
 
